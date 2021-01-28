@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>my first article | 段永浩的博客</title>
+  <title>段永浩的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="my first article">
-<meta property="og:url" content="http://example.com/2021/01/25/my-first-article/index.html">
+  <meta name="description" content="shell6.流程控制语句6.1if语句 语法： 123456789101112131415if[ 条件表达式 ]then​	指令fiif[ 条件表达式 ]then​	指令else if [ 条件表达式 ]	指令fi 常用判断条件 字符串比较 &#x3D; -lt 小于-le 小于等于-eq 等于-gt 大于-ge 大于等于-ne 不等于 6.2case语句 case用于条件的等值判断 #!&#x2F;bin&#x2F;bas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="段永浩的博客">
+<meta property="og:url" content="http://example.com/2021/01/29/2020%E5%B9%B411%E6%9C%8829%E6%97%A5%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E8%AF%BE/index.html">
 <meta property="og:site_name" content="段永浩的博客">
+<meta property="og:description" content="shell6.流程控制语句6.1if语句 语法： 123456789101112131415if[ 条件表达式 ]then​	指令fiif[ 条件表达式 ]then​	指令else if [ 条件表达式 ]	指令fi 常用判断条件 字符串比较 &#x3D; -lt 小于-le 小于等于-eq 等于-gt 大于-ge 大于等于-ne 不等于 6.2case语句 case用于条件的等值判断 #!&#x2F;bin&#x2F;bas">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-25T06:38:47.000Z">
-<meta property="article:modified_time" content="2021-01-25T06:38:47.900Z">
+<meta property="article:published_time" content="2021-01-28T16:01:30.554Z">
+<meta property="article:modified_time" content="2020-12-17T07:28:40.790Z">
 <meta property="article:author" content="段永浩">
 <meta name="twitter:card" content="summary">
   
@@ -152,27 +154,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-first-article" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2020年11月29日第五次开课" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      my first article
-    </h1>
-  
-
-        
-        <a href="/2021/01/25/my-first-article/" class="archive-article-date">
-  	<time datetime="2021-01-25T06:38:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h1><h2 id="6-流程控制语句"><a href="#6-流程控制语句" class="headerlink" title="6.流程控制语句"></a>6.流程控制语句</h2><p>6.1if语句</p>
+<p>语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>[ 条件表达式 ]</span><br><span class="line"></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"></span><br><span class="line">​	指令</span><br><span class="line"></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">if</span>[ 条件表达式 ]</span><br><span class="line"></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"></span><br><span class="line">​	指令</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> [ 条件表达式 ]</span><br><span class="line">	指令</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>常用判断条件</p>
+<p>字符串比较 =</p>
+<p>-lt 小于<br>-le 小于等于<br>-eq 等于<br>-gt 大于<br>-ge 大于等于<br>-ne 不等于</p>
+<p>6.2case语句</p>
+<p>case用于条件的等值判断</p>
+<p>#!/bin/bash</p>
+<p>case $1 in<br>“1”)<br>    echo “星期一”<br>;;<br>“2”)<br>    echo “星期二”<br>;;<br>“3”)<br>    echo “星期三”<br>;;<br>*)<br>    echo “天天都是星期五”<br>;;<br>esac</p>
+<p>6.3for循环</p>
+<p>基本语法</p>
+<p>for 变量 in 值1 值2 值3</p>
+<p>do</p>
+<pre><code> 语句</code></pre>
+<p>done</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">&quot;$*&quot;</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;当前数值为<span class="variable">$i</span>&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$@</span>&quot;</span></span><br><span class="line"><span class="keyword">do</span> </span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;当前数值为<span class="variable">$i</span>&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">SUM=0</span><br><span class="line"><span class="keyword">for</span>((i=1;i&lt;=100;i++))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">	SUM=$[<span class="variable">$SUM</span>+<span class="variable">$i</span>]</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;sum:<span class="variable">$SUM</span>&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">SUM=0</span><br><span class="line">I=1</span><br><span class="line"><span class="keyword">while</span> [ <span class="variable">$I</span> -le 100 ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">   SUM=$[<span class="variable">$I</span>+<span class="variable">$SUM</span>]</span><br><span class="line">   I=$[<span class="variable">$I</span>+1]</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;sum:<span class="variable">$SUM</span>&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>u    DML（数据操作语言）<br>l    插入、删除和修改数据库中的数据（INSERT、 UPDATE 、DELETE等）<br>u    DCL（数据控制语言）<br>l    用来控制存取许可、存取权限等（GRANT、REVOKE等）<br>u    DQL（数据查询语言）<br>l    用来查询数据库中的数据（SELECT）<br>u    DDL（数据定义语言）<br>l    用于定义数据的结构，比如 创建、修改或者删除数据库对象（CREATE TABLE 、DROP TABLE 等）</p>
+<p>– 查询全部列<br>select * from emp;<br>– 查询部分列<br>select empno, ename, sal from emp;<br>– 带条件的查询<br>select e.empno, e.ename, e.sal<br>from emp e<br>where sal&gt;=2000;<br>– 给数据列取别名<br>select ename as 姓名, sal*12 年薪 from emp;<br>– 连接运算符 ||<br>select empno||ename as 员工姓名 from emp;<br>select ename||’-‘||sal from emp;<br>– 判断空值 is null<br>– 查询没有奖金的员工信息<br>select * from emp<br>where comm is null;<br>– 查询有奖金的员工信息<br>select * from emp<br>where comm is not null;<br>– 去除重复行distinct<br>select distinct deptno from emp;<br>– 排序 asc升序， desc降序<br>select * from emp<br>order by sal asc;</p>
+<p>– 先筛再排<br>select * from emp<br>where sal &gt;= 2000<br>order by sal;<br>– 多个排序列的情况<br>– 按照工资升序排序，当有相等的情况时，启动第二排序规则<br>– 按照员工姓名升序排列（只是相等的记录）</p>
+<p>select * from emp<br>order by sal asc, ename asc;</p>
+<p>insert into emp(empno,ename,sal)<br>values(8888,’Tom’,800);</p>
+<p>– 9.    比较运算符=  &gt;&lt;(!= or &lt;&gt;) between and<br>– 查询SCOTT的员工信息<br>select * from emp where ename = ‘SCOTT’;<br>– 查询非销售员的所有员工信息<br>select * from emp where job &lt;&gt; ‘SALESMAN’;<br>– 查询基本工资在1000-2000的员工信息<br>select * from emp<br>where sal&gt;=1000 and sal&lt;=2000;<br>select * from emp<br>where sal between 1000 and 2000;<br>– in操作not in<br>– 查询部门编号在10，20，30，40内的员工信息<br>select * from emp<br>where deptno=10<br>or deptno=20<br>or deptno=30<br>or deptno=40;</p>
+<p>select * from emp<br>where deptno in(10,20,30,40);</p>
+<p>select * from emp<br>where deptno not in(10,20,30);</p>
+<p>– 模糊查询like _ %<br>– 查询员工姓名以A开头的信息<br>select * from emp<br>where ename like ‘A%’;<br>– 查询员工姓名以S结尾的信息<br>select * from emp<br>where ename like ‘%S’;<br>– 查询员工姓名中包含E的信息<br>select * from emp<br>where ename like ‘%E%’;<br>–查询员工姓名中，姓张的，名只有一个字的员工信息<br>select * from emp<br>where ename like ‘张_’;</p>
+<p>​                                         </p>
+
       
 
       
@@ -256,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/25/my-first-article/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/29/2020%E5%B9%B411%E6%9C%8829%E6%97%A5%E7%AC%AC%E4%BA%94%E6%AC%A1%E5%BC%80%E8%AF%BE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,7 +293,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/29/2020%E5%B9%B412%E6%9C%8820%E6%97%A5%E7%AC%AC%E5%85%AB%E6%AC%A1%E8%AF%BE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/01/29/2020%E5%B9%B412%E6%9C%886%E6%97%A5%E7%AC%AC%E5%85%AD%E6%AC%A1%E8%AF%BE/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -280,8 +303,8 @@
     </a>
   
   
-    <a href="/2021/01/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2021/01/29/2020%E5%B9%B411%E6%9C%8822%E6%97%A5%E7%AC%AC%E5%9B%9B%E6%AC%A1%E8%AF%BE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
